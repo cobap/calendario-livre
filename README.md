@@ -46,6 +46,32 @@ Isso deverá rodaro servidor do Django localmente, feito isso, provavelmente ele
 
 Ficou alguma dúvida? Teve algum problema? Não deixe de nos contatar!! Os responsáveis por esse projeto estão listados aqui embaixo...
 
+## Como esta estruturado nosso código? 
+
+Nossa aplicação esta em um formato aceitável pelo Heroku PaaS! Para mantermos o padrão, deixamos alguns arquivos de configuração de fora do .gitignore para que a experiência e sair do ambiente de dev. e colocar na nuvem seja a mais tranquila possível! 
+
+Aqui vai uma lista do significado geral de cada pasta, dentro dos arquivos, caso ele seja de real importância para o projeto, haverá comentários detalhados sobre sua funcionalidade.
+
+Ambiente Virtual:
+/bin - pasta responsável para criação do ambiente virtual. Nenhum arquivo listado aqui dentro é essêncial
+/lib & lib64 - arquivos de support para /bin
+/share - p/ compartilhamento de amb. virtual
+pyvenv.cfg - configuração do amb. virtual
+
+Heroku:
+Procfile - mostra ao Heroku como deve ser o deploy de nosso aplicativo
+
+Django:
+calendario_livre/ - pasta do aplicativo principal. Para mais detalhes consulte documentação do DJANGO
+mostra_calendario/ - pasta do modulos mostra_calendario que é responsável por armazenar as views, urls e API da aplicação
+manage.py - arquivo de controle do Django
+requirements.txt - arquivo de dependencias
+runtime.txt - arquivo para ajudar na execuçã do programa
+db.sqlite3 - BD nativo do Django
+
+Bower:
+bower.json -dependencias do Bower - package manager front-end
+
 
 ## Desenvolvido com:
 
