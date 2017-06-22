@@ -13,25 +13,47 @@ Softwares que são necessários a instalação:
 ```
 Python
 Django Framework
-Bower
+Pip - Package installer Python 
 ```
 
 ### Instalação
 
 
-Passo a passo com alguns exemplos de como ter o ambiente de dev. 
+Passo a passo com alguns exemplos de como configurar o ambiente de desenvolvimento. 
+OBS: Esse tutorial esta assumindo a utilização de uma máquina rodando Ubuntu LTS 16.0 
 
+Primeiro passo é clonar o repositório e entrar no diretório
 ```
-until finished
+git clone https://github.com/cobap/calendario-livre.git; cd calendario-livre
 ```
 
-## Built With
+Agora é necessário habilitar o ambiente virtual 
+```
+source bin/activate
+```
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Feito isso, estamos quase lá. Precisamos verificar se existe alguma dependencia não instalada no nosso sistema, para isso, rode:
+```
+pip install -r requirements.txt
+```
 
-## Authors
+Ótimo, agora vamos aos testes! Rode:
+```
+python manage.py runserver
+```
+
+Isso deverá rodaro servidor do Django localmente, feito isso, provavelmente ele lhe dará um link como "127.0.0.1:8000". Agora basta abrir o seu navegador e testar nossa aplicação! 
+
+Ficou alguma dúvida? Teve algum problema? Não deixe de nos contatar!! Os responsáveis por esse projeto estão listados aqui embaixo...
+
+
+## Desenvolvido com:
+
+* [Python](https://www.python.org/) - Language Python
+* [AngularJS](https://angularjs.org/) - JavaScript SuperHeroic Framework
+* [Django](https://www.djangoproject.com/) - Django Web Framework
+
+## Desenvolvedores:
 
 * **Antonio Coelho**
 
